@@ -1,5 +1,7 @@
+from math import sqrt, floor
+
 def solution(n):
-if n<3 or n>200:
+    if n<3 or n>200:
         return 0
         
     else:
@@ -26,10 +28,10 @@ def recurse(remaining, prev, cache):
     
     if cache[remaining][prev] != -1:
       return cache[remaining][prev]
-    # if remaining < prev:
-    #     return 0
-    # elif remaining == 0:
-    #     return 1
+      if remaining < prev:
+          return 0
+      elif remaining == 0:
+          return 1
         
     sum = 0
     if prev >  remaining:
