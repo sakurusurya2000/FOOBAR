@@ -98,6 +98,6 @@ def answer(w, h, s):
             m=cycle_count(cpw, w)*cycle_count(cph, h)
             grid+=m*(s**sum([sum([gcd(i, j) for i in cpw]) for j in cph]))
               
-    return grid//(factorial(w)*factorial(h))
+    return str(grid//(factorial(w)*factorial(h)))
 
 print answer(3, 3, 3)
